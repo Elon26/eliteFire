@@ -1,0 +1,39 @@
+.clever {
+    &__body {
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 30px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        position: relative;
+        z-index: 2;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: calc(33 / 20);
+        letter-spacing: 0.03em;
+        text-align: center;
+    }
+
+    &__img {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        margin-top: -100px;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        @media (max-width: $md3+px) {
+            margin-top: -40px;
+        }
+    }
+}

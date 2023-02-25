@@ -1,0 +1,120 @@
+.header {
+    &__body {
+        margin: 90px 0 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+
+        @media (max-width: $md2+px) {
+            margin: 20px 0 10px 0;
+            flex-direction: column;
+            margin: 20px 0;
+        }
+    }
+
+    &__leftSide {
+        flex: 0 1 280px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: $md2+px) {
+            flex: 1 1 auto;
+            gap: 60px;
+        }
+    }
+
+    &__field {
+        max-width: 100px;
+        font-size: 12px;
+        line-height: 1.5;
+        letter-spacing: 0.05em;
+        color: #6d6d6d;
+
+        @media (max-width: $md4+px) {
+            display: none;
+        }
+    }
+
+    &__rightSide {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 60px;
+    }
+
+    &__menu {
+        flex: 0 1 435px;
+    }
+
+    &__callback {
+        height: 50px;
+        width: 50px;
+        border-radius: 2px;
+        background-color: #eccf94;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: background-color 0.3s ease 0s;
+        @media (hover: hover) {
+            &:hover {
+                background-color: #dc8d03;
+            }
+        }
+
+        &_top {
+            display: none;
+            @media (max-width: $md2+px) {
+                display: flex;
+            }
+        }
+
+        &_bottom {
+            @media (max-width: $md2+px) {
+                display: none;
+            }
+        }
+
+        @media (max-width: $md2+px) {
+            height: 40px;
+            width: 40px;
+        }
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: $md2+px) {
+            gap: 40px;
+        }
+        @media (max-width: $md3+px) {
+            gap: 20px;
+        }
+        @media (max-width: $md4+px) {
+            gap: 10px;
+        }
+    }
+
+    &__item {
+        font-size: 13px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #949494;
+
+        transition: color 0.3s ease 0s;
+        @media (hover: hover) {
+            &:hover {
+                color: #ffcf7a;
+            }
+        }
+
+        @media (max-width: $md4+px) {
+            font-size: 10px;
+        }
+    }
+}

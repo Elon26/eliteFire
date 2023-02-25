@@ -1,0 +1,317 @@
+.author {
+    &__body {
+        padding-bottom: 100px;
+
+        @media (max-width: $md1+px) {
+            padding-bottom: 80px;
+        }
+
+        @media (max-width: $md2+px) {
+            padding-bottom: 40px;
+        }
+
+        @media (max-width: $md3+px) {
+            padding-bottom: 20px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 65px;
+
+        @media (max-width: $md1+px) {
+            margin-bottom: 45px;
+        }
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        gap: 85px;
+
+        @media (max-width: $md1+px) {
+            flex-direction: column;
+            text-align: center;
+            gap: 0;
+        }
+    }
+
+    &__col {
+        flex: 1 1 calc(50% - 85px);
+        min-width: 0;
+    }
+
+    &__img {
+        border-radius: 4px;
+        overflow: hidden;
+        height: 370px;
+        margin-bottom: 65px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: $md1+px) {
+            text-align: center;
+            img {
+                max-width: 550px;
+            }
+        }
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: $md3+px) {
+            height: 250px;
+        }
+    }
+
+    &__infoRow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+
+        @media (max-width: $md1+px) {
+            justify-content: space-evenly;
+        }
+
+        @media (max-width: $md3+px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__infoCol {
+        flex: 1 1 calc(50% - 10px);
+
+        &_checkbox {
+            flex: 0 0 230px;
+
+            @media (max-width: $md3+px) {
+                flex: 1 1 auto;
+                width: 250px;
+            }
+        }
+    }
+
+    &__infoItem {
+        margin-bottom: 40px;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__infoTitle {
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.135em;
+        text-transform: uppercase;
+        color: #ffffff80;
+        margin-bottom: 20px;
+    }
+
+    &__infoWidth {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+
+    &__infoColor {
+        width: 28px;
+        height: 28px;
+        background-color: #b8542a;
+        border-radius: 50%;
+
+        @media (max-width: $md1+px) {
+            margin: 0 auto;
+        }
+    }
+
+    &__infoRangeRow {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__infoRangeLimit {
+        flex: 0 1 45px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    &__infoRangeInput {
+        flex: 1 1 auto;
+    }
+
+    &__infoSlider {
+        width: 320px;
+        height: 80px;
+        padding: 0 35px 20px 35px;
+        overflow: hidden;
+
+        @media (max-width: $md1+px) {
+            margin: 0px auto;
+        }
+
+        @media (max-width: $md4+px) {
+            width: 270px;
+        }
+    }
+
+    &__infoCost {
+        font-size: 36px;
+        font-weight: 300;
+        letter-spacing: 0.05em;
+        color: #ffcf7a;
+    }
+
+    &__infoButtonArea {
+        display: flex;
+        justify-content: flex-end;
+
+        @media (max-width: $md1+px) {
+            justify-content: center;
+        }
+    }
+
+    &__button {
+        padding: 15px 55px !important;
+    }
+}
+
+.infoSlider {
+    position: relative;
+
+    &__slide {
+        img {
+            width: 250px;
+            height: 60px;
+            object-fit: cover;
+
+            @media (max-width: $md4+px) {
+                width: 200px;
+                height: 45px;
+            }
+        }
+    }
+
+    &__arrows {
+        cursor: pointer;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__arrow {
+        position: relative;
+        padding: 10px;
+        &_prev {
+            left: -45px;
+        }
+
+        &_next {
+            right: -45px;
+        }
+    }
+
+    &__dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 10px;
+
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 2px;
+            background-color: #464239;
+            border-radius: 0px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #ffcf7a;
+        }
+    }
+}
+
+.checkbox {
+    &__input {
+        display: none;
+    }
+
+    &__label {
+        font-weight: 500;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            align-self: flex-start;
+            flex: 0 0 20px;
+            height: 20px;
+            border: 1px solid #ceb787;
+            border-radius: 2px;
+        }
+
+        &::after {
+            content: "+";
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background-color: #eccf94;
+            border-radius: 2px;
+            transform: scale(0);
+            transition: transform 0.5s ease 0s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #191919;
+        }
+
+        & a {
+            color: #7a956b;
+        }
+    }
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+    transform: scale(1);
+}
+
+input[type="range"] {
+    -webkit-appearance: none !important;
+    width: 100%;
+    background: -webkit-linear-gradient(left, #ffcf7a 0%, #ffcf7a 63%, #646464 63%, #646464 100%);
+    height: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background: #ffcf7a;
+    height: 30px;
+    width: 30px;
+
+    @media (max-width: $md4+px) {
+        height: 20px;
+        width: 20px;
+    }
+}

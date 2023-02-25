@@ -1,0 +1,130 @@
+.contacts {
+    padding: 70px 0;
+    background-color: #121212;
+    border-bottom: 1px solid #232323;
+
+    @media (max-width: $md2+px) {
+        padding: 40px 0;
+    }
+
+    @media (max-width: $md3+px) {
+        padding: 20px 0;
+    }
+
+    &__title {
+        margin-bottom: 70px;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: $md2+px) {
+            flex-direction: column;
+        }
+    }
+
+    &__subRow {
+        flex: 0 0 50%;
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: $md2+px) {
+            justify-content: space-evenly;
+        }
+
+        @media (max-width: $md4+px) {
+            flex-direction: column;
+        }
+    }
+
+    &__col {
+        height: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media (max-width: $md2+px) {
+            text-align: center;
+
+            &_lastCol {
+                height: 100%;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: $md4+px) {
+            height: 100%;
+
+            &_lastCol {
+                gap: 0px;
+            }
+        }
+    }
+
+    &__item {
+        flex: 1 1 50%;
+
+        a {
+            font-size: 22px;
+            font-weight: 300;
+
+            transition: color 0.3s ease 0s;
+            @media (hover: hover) {
+                &:hover {
+                    color: #ffcf7a;
+                }
+            }
+        }
+
+        div {
+            font-size: 22px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        @media (max-width: $md4+px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 20px;
+        font-weight: 300;
+        color: #949494;
+
+        @media (max-width: $md4+px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__bigTel {
+        font-size: 36px !important;
+        font-weight: 250 !important;
+    }
+
+    &__button {
+        background-color: transparent !important;
+        color: #ffffff !important;
+        padding: 15px 30px !important;
+        border: 1px solid #ceb787;
+        border-radius: 2px;
+
+        transition: background-color 0.3s ease 0s, color 0.3s ease 0s !important ;
+        @media (hover: hover) {
+            &:hover {
+                background-color: #eebe5e !important;
+                color: #121212 !important;
+            }
+        }
+
+        @media (max-width: $md2+px) {
+            margin: 0px auto;
+        }
+    }
+}
